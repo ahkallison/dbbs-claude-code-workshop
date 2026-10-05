@@ -18,7 +18,7 @@ You need a copy of this repository on your computer. Choose one of these three w
 Start Claude Code in your workshop folder and type:
 
 ```
-Clone https://github.com/shandley/dbbs-claude-code-workshop into a folder called data/raw here.
+Use git clone to copy https://github.com/shandley/dbbs-claude-code-workshop into a folder called data/raw here.
 ```
 
 Claude needs `git` for this. If `git` is missing, Claude will tell you; use Option 3 instead.
@@ -39,7 +39,7 @@ This creates `data/raw/` containing both dataset folders. On a Mac without `git`
 2. Click the green **Code** button, then **Download ZIP**.
 3. Unzip the file and move its contents into `data/raw/` in your workshop folder. You can ask Claude to do this step: "Unzip ~/Downloads/dbbs-claude-code-workshop-main.zip into data/raw."
 
-You do not need a GitHub account for any of these.
+You do not need a GitHub account, a login, or the GitHub `gh` tool for any of these. If you are asked for a GitHub username or password, the address was mistyped; copy it again from this page.
 
 ## Check that it worked
 
