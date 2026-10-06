@@ -1,0 +1,47 @@
+# commands.log — full reproduction record
+# All commands run from the project root: dbbs-claude-workshop/
+# Date: 2026-10-06
+# R version: 4.2.2 (2022-10-31)
+#
+# ── To reproduce from scratch ────────────────────────────────────────────────
+#
+# 1. Clone or download the project so you have this folder structure:
+#      dbbs-claude-workshop/
+#        data/raw/airway-rnaseq/   ← raw data files (do not modify)
+#        scripts/                  ← analysis scripts
+#        results/                  ← outputs written here
+#
+# 2. Open R and install required packages (one-time setup):
+#      install.packages(c("ggplot2", "ggrepel", "dplyr",
+#                         "RColorBrewer", "scales", "pheatmap"))
+#      if (!requireNamespace("BiocManager")) install.packages("BiocManager")
+#      BiocManager::install(c("DESeq2", "apeglm"))
+#
+# 3. Set your working directory to dbbs-claude-workshop/ and run:
+#      bash results/commands.log
+#    or copy-paste the commands in the section below.
+#
+# ── Commands ─────────────────────────────────────────────────────────────────
+
+# Create output directories
+mkdir -p results/figures
+
+# Step 1: QC, library-size plots, and PCA
+# Input:  data/raw/airway-rnaseq/GSE52778_raw_counts_GRCh38.p13_NCBI.tsv.gz
+#         data/raw/airway-rnaseq/samples.csv
+# Output: results/figures/01a_library_sizes.png
+#         results/figures/01b_genes_detected.png
+#         results/figures/01c_pca.png
+Rscript scripts/01_qc.R
+
+# Step 2: DESeq2 differential expression (Untreated vs. Dexamethasone),
+#         gene symbol annotation, volcano plot, heatmap
+# Input:  data/raw/airway-rnaseq/GSE52778_raw_counts_GRCh38.p13_NCBI.tsv.gz
+#         data/raw/airway-rnaseq/samples.csv
+#         data/raw/airway-rnaseq/Homo_sapiens.gene_info.gz
+# Output: results/dex_vs_untreated_all.csv
+#         results/analysis_summary.txt
+#         results/versions.txt
+#         results/figures/02a_volcano.png
+#         results/figures/02b_heatmap.png
+Rscript scripts/02_deseq2.R

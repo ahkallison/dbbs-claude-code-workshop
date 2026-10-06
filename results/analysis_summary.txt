@@ -1,0 +1,11 @@
+# analysis_summary.txt
+comparison: Dexamethasone vs. Untreated
+n_untreated: 4
+n_dexamethasone: 4
+n_donors: 4
+design: paired (blocked by donor)
+genes_tested: 16802
+significant_padj05_lfc1_up: 453
+significant_padj05_lfc1_down: 420
+lfc_column_used_for_threshold: apeglm-shrunken (log2FoldChange)
+generated: 2026-10-06 11:59:05
