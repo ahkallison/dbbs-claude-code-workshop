@@ -9,6 +9,11 @@ Two small public datasets for the hands-on part of the DBBS Claude Code workshop
 
 Each folder has a `README.txt` that describes every file, where it came from, and what to know before you analyze it.
 
+## Workshop pages
+
+- [Workshop guide](https://claude.ai/artifact/WRifNQs15PVYCqwgS8SYXR): Claude Code features with short exercises, and the steps for the data project.
+- [Terminal cheat sheet](https://claude.ai/artifact/DATRJWZRb4dNvoe6wobtJj): the few terminal commands you need to find a folder and start Claude Code.
+
 ## Getting the files
 
 You need a copy of this repository on your computer. Choose one of these three ways.
